@@ -1,0 +1,33 @@
+.navbar {
+	background-color:$primary-color;
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	.navbar-list {
+		.navbar-list-item {
+			display:inline-block;
+			list-style: none;
+			margin:12px 20px;
+			a {
+				color:$secondary-color;
+				text-decoration: none;	
+			}
+		}
+	}
+	.navbar-search {
+		.input {
+			float:left;
+			width: 70%;
+			height: 38px;
+			border:1px solid green;
+			padding:0 20px;
+			border-radius:20px 0 0 20px
+		}
+		.btn {
+			float:left;
+			width: 30%;
+			height: 38px;
+			border-radius:0 20px 20px 0;
+		}
+	}
+}

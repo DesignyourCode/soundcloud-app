@@ -1,0 +1,9 @@
+.btn {
+	border:1px;
+	background-color:inherit;
+	padding:10px;
+	&-green {
+		background-color:$green;
+		color:white;
+	}
+}

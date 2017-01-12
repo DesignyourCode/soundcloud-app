@@ -56,6 +56,7 @@ gulp.task('img', function() {
 // JS
 var scripts = [
     'assets/lib/src/app.js',
+    'assets/lib/src/services/*.js',
     'assets/lib/src/router/*.js',
     'assets/lib/src/controllers/*.js',
 ];

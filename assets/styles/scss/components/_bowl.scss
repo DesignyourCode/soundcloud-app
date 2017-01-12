@@ -1,0 +1,48 @@
+$bowl-border-width: 10px;
+$bowl-width: 200px; 
+$bowl-height: 200px;
+
+.bowl {
+	border:$bowl-border-width solid darkgrey;
+	display:block;
+	height:$bowl-height;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+	width:$bowl-width;
+	-webkit-border-radius:100px;
+	   -moz-border-radius:100px;
+			border-radius:100px;
+
+	&:after, &:before {
+		background-color:rgba(255,255,255,0.6);
+		content: "";
+		position: absolute;
+		-webkit-border-radius:100px;
+		   -moz-border-radius:100px;
+				border-radius:100px;
+		z-index:9999;
+	}
+
+	&:after {
+		height:$bowl-height / 10;
+		right:24%;
+		top:20%;
+		width:$bowl-height / 10;
+	}
+	&:before {
+		height:$bowl-height / 8;
+		right:12%;
+		top:30%;
+		width:$bowl-height / 8;
+	}
+
+	.bowl-completion {
+		width:$bowl-width;
+		position:absolute;
+		bottom:0;
+		left:0;
+		@include transition(all .3 ease-in-out);
+	}
+
+}

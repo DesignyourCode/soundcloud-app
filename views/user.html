@@ -2,13 +2,20 @@
 	<div class="row">
 		<div class="col-lg-6 col-md-12 col-sm-12">
 			<div class="bowl">
-				
+				<div class="bowl-completion" style="height:{{user.completion}}%; background-color:{{user.color}}"></div>
 			</div>
 			<h3>Welcome back {{ user.name }}</h3>
 			<p>You registered using the email {{ user.email }}</p>
 		</div>
 		<div class="col-lg-6 col-md-12 col-sm-12">
-			
+			<div class="dropdown">
+				<div class="dropdown-toggle" ng-click="dropdown=!dropdown">Select a genre</div>
+				<div ng-show="dropdown" class="dropdown-list">
+					<div ng-repeat="genre in user.genres" class="dropdown-list-item">
+						<a href="/user/{{ genre }}" ng-click="!dropdown=dropdown">{{ genre }}</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

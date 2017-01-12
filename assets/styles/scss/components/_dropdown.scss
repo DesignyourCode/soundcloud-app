@@ -1,12 +1,28 @@
 .dropdown {
+	width:200px;
+	display:block;
+	position:relative;
 	.dropdown-toggle {
+		padding:10px;
+		border:1px solid grey;
+		height:40px;
 		&:after {
-
+			border:1px solid grey;
+			right:0;
+			content: "\f107";
+			font-family: FontAwesome;
+			position:absolute;
+			padding:10px 12px;
+			height:40px;
+			top:0;
 		}
 	}
 	.dropdown-list {
-		.dropdownn-list-item {
-
+		.dropdown-list-item {
+			color:white;
+			padding:10px;
+			background-color:grey;
+			width:164px;
 		}
 	}
 }

@@ -5,15 +5,24 @@
 @for $i from 1 through 12 {
 	.col-lg-#{$i} {
 		@include span-columns($i);
+		&:after {
+			content:" ";
+		}
 	}
 	@media screen and (max-width:$tablet) {
 		.col-md-#{$i} {
 			@include span-columns($i);	
+			&:after {
+				content:" ";
+			}
 		}
 	}
 	@media screen and (max-width:$mobile) {
 		.col-sm-#{$i} {
 			@include span-columns($i);	
+			&:after {
+				content:" ";
+			}
 		}
 	}
 }

@@ -55,15 +55,15 @@ gulp.task('img', function() {
 
 // JS
 var scripts = [
-    'assets/lib/src/*.js',
+    'assets/lib/src/app.js',
+    'assets/lib/src/router/*.js',
     'assets/lib/src/controllers/*.js',
-    'assets/lib/src/router/*.js'
 ];
 
 gulp.task('concat', function() {
     return gulp.src(scripts)
         .pipe(concat('app.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .on('error', function errorHandler (error) {
             console.log(error.toString());
             this.emit('end');

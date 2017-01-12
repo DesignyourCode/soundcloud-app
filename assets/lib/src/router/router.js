@@ -1,5 +1,3 @@
-var app = angular.module("SoundcloudApp", ["ngRoute"])
-
 app.config(['$routeProvider','$locationProvider',
 	function($routeProvider, $locationProvider) {
     	$routeProvider
@@ -19,18 +17,3 @@ app.config(['$routeProvider','$locationProvider',
 		$locationProvider.html5Mode(true);
 	}
 ]);
-
-app.controller('GlobalCtrl', ['$scope', 
-	function($scope) {
-		$scope.name = 'Matthew';
-	}
-])
-
-app.controller('UserCtrl', ['$scope', 
-	function($scope) {
-		$scope.user = {
-			name: 'Matthew',
-			email: 'mmellows1@gmail.com'
-		}
-	}
-])

@@ -11,8 +11,8 @@
 			<div class="dropdown">
 				<div class="dropdown-toggle" ng-click="dropdown=!dropdown">Select a genre</div>
 				<div ng-show="dropdown" class="dropdown-list">
-					<div ng-repeat="genre in user.genres" class="dropdown-list-item">
-						<a href="/user/{{ genre }}" ng-click="!dropdown=dropdown">{{ genre }}</a>
+					<div ng-repeat="track in user.tracks" class="dropdown-list-item">
+						<a href="/user/{{ genre }}" ng-click="!dropdown=dropdown">{{ track.genre }}</a>
 					</div>
 				</div>
 			</div>

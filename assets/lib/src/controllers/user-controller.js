@@ -1,9 +1,5 @@
-app.controller('UserCtrl', ['$scope', 
-	function($scope) {
-		SC.initialize({
-			client_id: 'bda4ada8694db06efcac9cf97b872b3e',
-			redirect_uri: '/'
-		});
+app.controller('UserCtrl', ['$scope', 'User', 'Tracks',
+	function($scope, User, Tracks) {
 
 		$scope.user = {
 			id: 123,
@@ -15,15 +11,13 @@ app.controller('UserCtrl', ['$scope',
 			// genres: 
 		}
 
-		console.log(SC);
+		User.get($scope.user.id).then(function(res) {
+			console.log(res);
+		});
 
-		SC.get('/users/' + $scope.user.id).then(function(user) {
-			$scope.user.name = user.first_name;
-		})
-
-		SC.get('/users/' + $scope.user.id + '/tracks').then(function(tracks) {
-			$scope.user.tracks = tracks;
-			console.log($scope.user.tracks)
+		Tracks.get($scope.user.id).then(function(res) {
+			// $scope.user.tracks = tracks;
+			console.log(res);
 		})
 	}
 ])
